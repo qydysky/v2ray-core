@@ -207,7 +207,7 @@ func (s *TCPNameServer) sendQuery(ctx context.Context, domain string, clientIP n
 
 			dnsCtx = session.ContextWithContent(dnsCtx, &session.Content{
 				Protocol:       "dns",
-				SkipDNSResolve: true,
+				SkipDNSResolve: false,
 			})
 
 			var cancel context.CancelFunc
